@@ -207,10 +207,10 @@ void Platform::process_input_event(const SDL_Event &event) {
   switch (event.type) {
     // Mouse
     case SDL_MOUSEBUTTONDOWN:
-      mouse_events.push_back({EV_KEY, BTN_LEFT, 1});
+      mouse_events.push_back({EV_KEY, BTN_TOUCH, 1});
       break;
     case SDL_MOUSEBUTTONUP:
-      mouse_events.push_back({EV_KEY, BTN_LEFT, 0});
+      mouse_events.push_back({EV_KEY, BTN_TOUCH, 0});
       break;
     case SDL_MOUSEMOTION:
       if (!single_window_) {
